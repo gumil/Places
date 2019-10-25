@@ -1,0 +1,103 @@
+{
+  "html_attributions": [],
+  "next_page_token": "testToken",
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3760864,
+          "lng": 4.880024100000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37746473029149,
+            "lng": 4.881356330291501
+          },
+          "southwest": {
+            "lat": 52.37476676970849,
+            "lng": 4.878658369708496
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+      "id": "e730d0cb50adb87001819ead2701303e0aef1258",
+      "name": "Willemine Semeins Jazz vocalist en coach",
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115458840911890924412/photos\">Willemine Semeins Jazz vocalist en coach</a>"
+          ],
+          "photo_reference": "CmRaAAAALKrfV9AfYY_hp-RkRUBEGKLrYwMCRXOU5HHTS0W3KLbxdzhcjEczbvNI4FCjSfZQvJNwQvwdZJ4dwzqUg8S7w4XjtTFrDJP4XACHRfbLWvU7ZHzEeW7v3SKxTnNGf8qyEhAF5T5AUfbuUy1ts0auhuU0GhR47xjrJsBCrXpt48lR7I69ODsueA",
+          "width": 1362
+        }
+      ],
+      "place_id": "ChIJ7Wbs9toJxkcR9KugCB5vsxM",
+      "plus_code": {
+        "compound_code": "9VGJ+C2 Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+C2"
+      },
+      "reference": "ChIJ7Wbs9toJxkcR9KugCB5vsxM",
+      "scope": "GOOGLE",
+      "types": [
+        "night_club",
+        "bar",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Egelantiersstraat 121-B, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.375233,
+          "lng": 4.880817
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37659393029151,
+            "lng": 4.882158980291502
+          },
+          "southwest": {
+            "lat": 52.37389596970851,
+            "lng": 4.879461019708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "a0d53630e2182845a24ec0f74c0bce46b7716b27",
+      "name": "Café De Nieuwe Lelie",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 807,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111291301785464834278/photos\">Café De Nieuwe Lelie</a>"
+          ],
+          "photo_reference": "CmRaAAAA7YKinPcKrGSMA0A6nLjbUGSdtllnl_G7K6HVpy7GmlnXQpm2NBKbpORXWzNxCX3iYiVKZ5xqfSi-0R57OZuN-DwqOc4DNIvoxiaoLzvngBYumbkEeXt63FzVDK2lcSs_EhCEpwfJy0-F1Lf4nX2zKYg6GhQWo8a_uxp9y2nlaZl64zU38LY9gw",
+          "width": 1192
+        }
+      ],
+      "place_id": "ChIJ22b14doJxkcRFQHegtdAp54",
+      "plus_code": {
+        "compound_code": "9VGJ+38 Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+38"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJ22b14doJxkcRFQHegtdAp54",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 273,
+      "vicinity": "Nieuwe Leliestraat 83, Amsterdam"
+    }
+  ],
+  "status": "OK"
+}

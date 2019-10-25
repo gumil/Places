@@ -1,0 +1,1010 @@
+{
+  "html_attributions": [],
+  "next_page_token": "CqQCHAEAABKf0nm0wJarHirOXGFfcw8MRWSPqrwJ-WxSHscGCWTr-DO2_WNRUKS0F8ACTCcJDuQ_xw4VNKVXXOqVZDHA1NawKG7xEdkUsjTtEKg8JlfxA4i9NfsdQ_l4__hlIPbcZL5OsArjuUAi7TcLarsP6d_cdpfyDzuw0BLysqFSxLUpyReasA_qvCWdwUUJ2urfDzMv9xvJ2d-GGi-a5UzHqKg1LWiYO7zn5g1d3-4KBjrbjuUyZa4xQOuz7vOrfPFjblnSJkvFDMUMbX_fWhCgR0Is-MnzgZMAXY2TJMi2QvLXbpKNm9WwAa57WHcWvocf8q-vEDwUF6EYruuThKtp33gCfqCNKYmnWG1j8McQEEL6cRefA3gj_mZxBJHKl3uSShIQY39TC4t2hvt523XGdgz89hoUjgrGmhGiAlqaSbJQTODoY_6WpsA",
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3760864,
+          "lng": 4.880024100000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37746473029149,
+            "lng": 4.881356330291501
+          },
+          "southwest": {
+            "lat": 52.37476676970849,
+            "lng": 4.878658369708496
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+      "id": "e730d0cb50adb87001819ead2701303e0aef1258",
+      "name": "Willemine Semeins Jazz vocalist en coach",
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115458840911890924412/photos\">Willemine Semeins Jazz vocalist en coach</a>"
+          ],
+          "photo_reference": "CmRaAAAALKrfV9AfYY_hp-RkRUBEGKLrYwMCRXOU5HHTS0W3KLbxdzhcjEczbvNI4FCjSfZQvJNwQvwdZJ4dwzqUg8S7w4XjtTFrDJP4XACHRfbLWvU7ZHzEeW7v3SKxTnNGf8qyEhAF5T5AUfbuUy1ts0auhuU0GhR47xjrJsBCrXpt48lR7I69ODsueA",
+          "width": 1362
+        }
+      ],
+      "place_id": "ChIJ7Wbs9toJxkcR9KugCB5vsxM",
+      "plus_code": {
+        "compound_code": "9VGJ+C2 Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+C2"
+      },
+      "reference": "ChIJ7Wbs9toJxkcR9KugCB5vsxM",
+      "scope": "GOOGLE",
+      "types": [
+        "night_club",
+        "bar",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Egelantiersstraat 121-B, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.375233,
+          "lng": 4.880817
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37659393029151,
+            "lng": 4.882158980291502
+          },
+          "southwest": {
+            "lat": 52.37389596970851,
+            "lng": 4.879461019708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "a0d53630e2182845a24ec0f74c0bce46b7716b27",
+      "name": "Café De Nieuwe Lelie",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 807,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111291301785464834278/photos\">Café De Nieuwe Lelie</a>"
+          ],
+          "photo_reference": "CmRaAAAA7YKinPcKrGSMA0A6nLjbUGSdtllnl_G7K6HVpy7GmlnXQpm2NBKbpORXWzNxCX3iYiVKZ5xqfSi-0R57OZuN-DwqOc4DNIvoxiaoLzvngBYumbkEeXt63FzVDK2lcSs_EhCEpwfJy0-F1Lf4nX2zKYg6GhQWo8a_uxp9y2nlaZl64zU38LY9gw",
+          "width": 1192
+        }
+      ],
+      "place_id": "ChIJ22b14doJxkcRFQHegtdAp54",
+      "plus_code": {
+        "compound_code": "9VGJ+38 Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+38"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJ22b14doJxkcRFQHegtdAp54",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 273,
+      "vicinity": "Nieuwe Leliestraat 83, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.37793730000001,
+          "lng": 4.8797792
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3792276302915,
+            "lng": 4.881158030291503
+          },
+          "southwest": {
+            "lat": 52.3765296697085,
+            "lng": 4.878460069708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "5ead77091e479744ceffcf175c113c5eabe503b8",
+      "name": "The Good Companion",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3480,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103320921431652688563/photos\">Rajat Thomas</a>"
+          ],
+          "photo_reference": "CmRaAAAAkHrbd4zgHcKxato8tgpz35LEmqdAu7c4cWrglqUdysniXGNlTs6asc39AnmY-ZuFe_GsLW7LfrJG_kA6tLjUNjPwXbVBlfFVW4uLq42p0u30kJ35gacdRUjTACUFwgbzEhAJkTJxrv5h8Y9zjVgaapU6GhRCHGIW3HfslnIyNxtTD7zw2d3vKg",
+          "width": 4640
+        }
+      ],
+      "place_id": "ChIJQy6Vf9oJxkcRUSPPkDZ3954",
+      "plus_code": {
+        "compound_code": "9VHH+5W Amsterdam, Netherlands",
+        "global_code": "9F469VHH+5W"
+      },
+      "rating": 4.6,
+      "reference": "ChIJQy6Vf9oJxkcRUSPPkDZ3954",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 286,
+      "vicinity": "Westerstraat 264, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.374157,
+          "lng": 4.8777581
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37550958029151,
+            "lng": 4.879104930291501
+          },
+          "southwest": {
+            "lat": 52.37281161970851,
+            "lng": 4.876406969708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "1991ef10f49b7075deae5f111cf1e6496e1d1698",
+      "name": "The Jitterbug Saloon",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107844199611877086291/photos\">nanne osinga</a>"
+          ],
+          "photo_reference": "CmRaAAAATuumz0LzO-PVQs8EQ4_y-SdiLL2GCIhl2bC1bRPz1q8Rtq3mSOCeaTnce981bgz_fuqs6c0scvgPzwI02d8zvLzGcXMy4g-wsXcsFxvmoVCRi8G1CRjvEsmu9bsNB7YdEhA6WH8mkTxA8BHA3335lN6YGhSZuZfwcCpyUCvp038B2yenADOaXQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJKY8fmm8JxkcRwD76MxvEjFA",
+      "plus_code": {
+        "compound_code": "9VFH+M4 Amsterdam, Netherlands",
+        "global_code": "9F469VFH+M4"
+      },
+      "rating": 4.3,
+      "reference": "ChIJKY8fmm8JxkcRwD76MxvEjFA",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 41,
+      "vicinity": "Bloemgracht 170, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.37715799999999,
+          "lng": 4.8817434
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37843163029149,
+            "lng": 4.883206830291502
+          },
+          "southwest": {
+            "lat": 52.3757336697085,
+            "lng": 4.880508869708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "bd7cc2bdbb4f137c17f6433ae088f3ac35cc38a7",
+      "name": "Barkitchen Tuin10",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1836,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106014172526237350084/photos\">Yoshi Hoet</a>"
+          ],
+          "photo_reference": "CmRaAAAAznyHW6YvVFQMgfhdj_jTaUU-l0KaEB82zC8fTEMsxSTE6JcDSHfai6e0mc0GknM6_NcYgFOwzicZo6uhrVx0qU2Ew-ddICzqO2OksxeJ2DqZq-YH9-PTolCgBXDXDouJEhB7-mkho03mqa7Q6ek8kYheGhQgdqF1iN8q6mWH0YbnOBlafe_eyA",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJK3LBvNoJxkcRTHVXut6d0O0",
+      "plus_code": {
+        "compound_code": "9VGJ+VM Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+VM"
+      },
+      "price_level": 2,
+      "rating": 4.199999999999999,
+      "reference": "ChIJK3LBvNoJxkcRTHVXut6d0O0",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 121,
+      "vicinity": "Tweede Tuindwarsstraat 10, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3763332,
+          "lng": 4.882291599999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3776577302915,
+            "lng": 4.883655780291502
+          },
+          "southwest": {
+            "lat": 52.3749597697085,
+            "lng": 4.880957819708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "7b6eef7805a7529848d35480a649923e6907de35",
+      "name": "Café Sonneveld",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1365,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114210201051182698596/photos\">Café Sonneveld</a>"
+          ],
+          "photo_reference": "CmRaAAAA5axj2aoyApzSskJcDqrwy9k_CIIyb9JTG-S4kTa0CPiDxP9VMsZ-kUP7y7_NG63kEiou2JnvTT5ixpmQ8CqVh0-LKqxqbX0g-YPxO4xGMYe2FkHyovVWD-jFD8HqBnz3EhDiuCw0hw39zaHriaGG3WkUGhRB3RsS0fDvnnA3VYVVyxIQZcOM7Q",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJ69iOyNoJxkcRzXH14nv_h0c",
+      "plus_code": {
+        "compound_code": "9VGJ+GW Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+GW"
+      },
+      "price_level": 2,
+      "rating": 4.399999999999999,
+      "reference": "ChIJ69iOyNoJxkcRzXH14nv_h0c",
+      "scope": "GOOGLE",
+      "types": [
+        "cafe",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1302,
+      "vicinity": "Egelantiersgracht 72 74, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3771818,
+          "lng": 4.881917000000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3784356802915,
+            "lng": 4.883263930291503
+          },
+          "southwest": {
+            "lat": 52.3757377197085,
+            "lng": 4.880565969708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "bed2a3d83d29f653922fae8dd53e7713b8614519",
+      "name": "Nice Place",
+      "photos": [
+        {
+          "height": 2160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118035346738652030879/photos\">keith saarloos</a>"
+          ],
+          "photo_reference": "CmRaAAAArIsrlLrCJXVNLCYdu5lM267G-5magc9WTWpdDfH1Et3KsdGAsc3_HW_bcICPAPi8_c0Ep3lU7bqty5BgqTYIigTH0qmWUBIjMB6PMx8xd-bwx-gI0nAREGQw_mocLFjXEhD75LEQKm5EaR90sL1njy1eGhSamYBx6fKabPp3P4GhEI9rQ7s9OA",
+          "width": 3840
+        }
+      ],
+      "place_id": "ChIJVVVFu9oJxkcR29SB1dlZUY0",
+      "plus_code": {
+        "compound_code": "9VGJ+VQ Amsterdam, Netherlands",
+        "global_code": "9F469VGJ+VQ"
+      },
+      "rating": 4,
+      "reference": "ChIJVVVFu9oJxkcR29SB1dlZUY0",
+      "scope": "GOOGLE",
+      "types": [
+        "night_club",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4,
+      "vicinity": "Tweede Tuindwarsstraat 11HS, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3742778,
+          "lng": 4.8815817
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3755934802915,
+            "lng": 4.882950380291502
+          },
+          "southwest": {
+            "lat": 52.3728955197085,
+            "lng": 4.880252419708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "f98e20bca7107f20e3c2b1db760c1ece63a6fda4",
+      "name": "Café Chris",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114528345433649845720/photos\">Acosta Gontran</a>"
+          ],
+          "photo_reference": "CmRaAAAAtWCB9_uRkpFcWbDBVOF1PSJEivZmltAZWX6pnqT1_JmQWbACmPeUkqTZn19_XDjnXt-LCX0Zd-OjQx8eTZs6jTY4MiE5-Q-3r9ZiDXfWiVpbkXYErvz5ujFm4QEpyltJEhBswIT09oIlcqCqZNQb19dgGhS2MdpSsPMSj8Y8wAFQ8NvQpMH_6g",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJp8WKOdsJxkcRVL-xZ7kdT60",
+      "plus_code": {
+        "compound_code": "9VFJ+PJ Amsterdam, Netherlands",
+        "global_code": "9F469VFJ+PJ"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJp8WKOdsJxkcRVL-xZ7kdT60",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 380,
+      "vicinity": "Bloemstraat 42, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3733215,
+          "lng": 4.8793871
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3745720802915,
+            "lng": 4.880802230291501
+          },
+          "southwest": {
+            "lat": 52.3718741197085,
+            "lng": 4.878104269708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "dac82b1fda7ad7a12ed23727ebfd70dbd70a628f",
+      "name": "Salmuera",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3740,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103091079903989467909/photos\">Salmuera</a>"
+          ],
+          "photo_reference": "CmRaAAAAcV3BJreli_RdYTgx3xLcImV_RVNnDzqhZDd0eOaeTY7ietmNHdqObeS6uTG8jIR60WQgP_F6nb20D9hMl7Sa6KdJhTltxcFoYZCwNNHpnWxDAYe3ekncDfrfYcJYk1iOEhA200gMy0e0HAlqbgvaCbk9GhSvekHRQ1V9oAwRGWzGWJ3107J6HQ",
+          "width": 4675
+        }
+      ],
+      "place_id": "ChIJ8TC-edsJxkcRJaQoPxTsOmQ",
+      "plus_code": {
+        "compound_code": "9VFH+8Q Amsterdam, Netherlands",
+        "global_code": "9F469VFH+8Q"
+      },
+      "price_level": 2,
+      "rating": 4.399999999999999,
+      "reference": "ChIJ8TC-edsJxkcRJaQoPxTsOmQ",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 906,
+      "vicinity": "Rozengracht 106, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.37323070000001,
+          "lng": 4.879169699999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3744967802915,
+            "lng": 4.880574580291501
+          },
+          "southwest": {
+            "lat": 52.3717988197085,
+            "lng": 4.877876619708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "69cb26f8a00531a37280ceb3b87eae98d915b91a",
+      "name": "Cannibale Royale Rozengracht",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118200241937474286782/photos\">Ana B</a>"
+          ],
+          "photo_reference": "CmRaAAAAc90zWRo0pROIodNnC5fovbPWfPXZRODyIQUkBDNR87HlWIqb1hEUHefaUZtVJ-OaI52OnhctANKxOSibuBGQhbCV3cJMdI3l2eJq71JU35cjRsibPeu3hev1p-IeJilwEhCBZ4eX5QbFkMsAKgtXjuvEGhT8Y-x8jenZi4xHAVYT8VWaHmvGEQ",
+          "width": 3000
+        }
+      ],
+      "place_id": "ChIJ_yRiXyMJxkcR51uCTGlqlpc",
+      "plus_code": {
+        "compound_code": "9VFH+7M Amsterdam, Netherlands",
+        "global_code": "9F469VFH+7M"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJ_yRiXyMJxkcR51uCTGlqlpc",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 241,
+      "vicinity": "Rozengracht 114, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.37308559999999,
+          "lng": 4.8787856
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3743722802915,
+            "lng": 4.880175630291502
+          },
+          "southwest": {
+            "lat": 52.3716743197085,
+            "lng": 4.877477669708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "6388c4b256ec646cb6f13e6c763baa4d48ae19d9",
+      "name": "24/7 Burgerhouse",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJq54OhQ0JxkcRVhU4CfKsnyY",
+      "plus_code": {
+        "compound_code": "9VFH+6G Amsterdam, Netherlands",
+        "global_code": "9F469VFH+6G"
+      },
+      "reference": "ChIJq54OhQ0JxkcRVhU4CfKsnyY",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Rozengracht 144, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3760187,
+          "lng": 4.8838742
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3773489302915,
+            "lng": 4.885271480291503
+          },
+          "southwest": {
+            "lat": 52.3746509697085,
+            "lng": 4.882573519708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "78184ba8f62ea16e910eaf1584f22adf132e7e27",
+      "name": "Cafe Wester",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107327100529062054847/photos\">steve chandar</a>"
+          ],
+          "photo_reference": "CmRaAAAA-IaOUw_gqNRI1V5zUsvot-VgBn-zlt0bPkXi9hrgFlisJ6XqEkPuojcbP-tod_yS0VCfh3gMnYDuFoUPuJB06hZ-qfVLinrSXR7FSIPVVWewL3AFLL4ABm9wEQkD2HogEhDFPFz-7QqZ7EXShZMuIn1nGhTr-eMHtWhEZFW0yqBNB7estTw85w",
+          "width": 2880
+        }
+      ],
+      "place_id": "ChIJ8eqzO8UJxkcRnaqZbdTHTL0",
+      "plus_code": {
+        "compound_code": "9VGM+CG Amsterdam, Netherlands",
+        "global_code": "9F469VGM+CG"
+      },
+      "price_level": 2,
+      "rating": 4.1,
+      "reference": "ChIJ8eqzO8UJxkcRnaqZbdTHTL0",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 380,
+      "vicinity": "Nieuwe Leliestraat 2, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.374063,
+          "lng": 4.8827298
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3753613302915,
+            "lng": 4.884117680291502
+          },
+          "southwest": {
+            "lat": 52.3726633697085,
+            "lng": 4.881419719708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "c74fce7070a75b3daa936081f82936d478d4cc18",
+      "name": "Café de Oude Wester",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103444574646620883966/photos\">Doc G</a>"
+          ],
+          "photo_reference": "CmRaAAAAhZCXFJSuk5ztX-Pys2-HCoymy-xjSIVx8RE1KgE8LXo2xIUu3VXR0I2NU100Z7J8vIE7lBjv1Rdnx5LnYebLuwYADYSOrmondX3Meotg00f8Y7-lOFcYOcK9tx3SQgGvEhC4cyxIF8LPowF5QSCFktWvGhTUhcT_O9eDcPFJ9iOhlfoT-49Trg",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJ3QX9ysQJxkcRbwelKBJNiGA",
+      "plus_code": {
+        "compound_code": "9VFM+J3 Amsterdam, Netherlands",
+        "global_code": "9F469VFM+J3"
+      },
+      "price_level": 2,
+      "rating": 3.7,
+      "reference": "ChIJ3QX9ysQJxkcRbwelKBJNiGA",
+      "scope": "GOOGLE",
+      "types": [
+        "cafe",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 490,
+      "vicinity": "Rozengracht 2, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3740708,
+          "lng": 4.874805500000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3754175302915,
+            "lng": 4.876256080291503
+          },
+          "southwest": {
+            "lat": 52.3727195697085,
+            "lng": 4.873558119708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "6b309f2cb59f66a4607bf2bce9dd3a17f137401a",
+      "name": "Sameplace",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1632,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109959694578073984458/photos\">Wesly Babel</a>"
+          ],
+          "photo_reference": "CmRaAAAAIh2KqxccUs0pPcuwisE83yRYjtwWCHoaDamVYJaU-FwTBoBL3oK6HOjWwaMGozZFaREFsxwE5YXMiPmg2_8GGEXvTXtS16TrxY2wFwtoe-cxYPDpUul7toUNDOgZby8YEhDm-SPtsSJuOTUe7wgEh0KoGhRrz0izaDDuAfCSjqzImu6OxwXGsQ",
+          "width": 1224
+        }
+      ],
+      "place_id": "ChIJF4COQtkJxkcRdgqLhOOKU-M",
+      "plus_code": {
+        "compound_code": "9VFF+JW Amsterdam, Netherlands",
+        "global_code": "9F469VFF+JW"
+      },
+      "rating": 3.4,
+      "reference": "ChIJF4COQtkJxkcRdgqLhOOKU-M",
+      "scope": "GOOGLE",
+      "types": [
+        "cafe",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 50,
+      "vicinity": "Nassaukade 120, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3767155,
+          "lng": 4.8841684
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3780629302915,
+            "lng": 4.885535480291503
+          },
+          "southwest": {
+            "lat": 52.37536496970851,
+            "lng": 4.882837519708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "50f683a1cc752022fdf5fdbb50d4d81d2f0fe06d",
+      "name": "'t Smalle",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111909520340312398547/photos\">alains chou</a>"
+          ],
+          "photo_reference": "CmRaAAAAv-ugjl0M6XosUimFCaZbHvHfwaMkv8rpCiwNDXK5jXO9INShk9BfmvBJlrU3IuShbjHuh0LLa4DZlzW-WQp5xljXfBbEvMQXo25AWPrHkRtzxseiYDp4dhw1B9Fa_29pEhCb9BOuiDAC9zo7XaiaOrZ-GhQlJFG8Tj4X_xpKcHVv9F7AAHmaNw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJC8q7RsUJxkcRcMTYAnPCMO4",
+      "plus_code": {
+        "compound_code": "9VGM+MM Amsterdam, Netherlands",
+        "global_code": "9F469VGM+MM"
+      },
+      "price_level": 2,
+      "rating": 4.399999999999999,
+      "reference": "ChIJC8q7RsUJxkcRcMTYAnPCMO4",
+      "scope": "GOOGLE",
+      "types": [
+        "cafe",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 626,
+      "vicinity": "Egelantiersgracht 12, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3736532,
+          "lng": 4.882652500000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37500028029149,
+            "lng": 4.884056530291502
+          },
+          "southwest": {
+            "lat": 52.3723023197085,
+            "lng": 4.881358569708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "a6cdf8c9cef15aa6fe594131064a2272cd2b67d3",
+      "name": "Amigo Grill Restaurant",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 700,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110840774583158402871/photos\">Amigo Grill Restaurant</a>"
+          ],
+          "photo_reference": "CmRaAAAAgUn_8BQYKVbNCa2xEZUj00ESWlK8M3PT6qqGITr-FWJSoxZP5kiVUKu1iL2_N2u0cVzPx7S5BYLjnD4zYo3zPdrID8ZUe-T3rGm63_W-wFD2CWS_kpG9ImHuPnd2LHYGEhCfBqmpo8Foov7meLrwOAg1GhTfrtFMIABIXm_NoOaaUzEPX8uRnA",
+          "width": 1242
+        }
+      ],
+      "place_id": "ChIJ35H6tMQJxkcRBKR7oU3makc",
+      "plus_code": {
+        "compound_code": "9VFM+F3 Amsterdam, Netherlands",
+        "global_code": "9F469VFM+F3"
+      },
+      "price_level": 2,
+      "rating": 4.399999999999999,
+      "reference": "ChIJ35H6tMQJxkcRBKR7oU3makc",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 466,
+      "vicinity": "Prinsengracht 188, H, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3726883,
+          "lng": 4.878902299999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3741235802915,
+            "lng": 4.880192080291502
+          },
+          "southwest": {
+            "lat": 52.3714256197085,
+            "lng": 4.877494119708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "83d3b56f1a8c6977031d41e70a9f64922da4f393",
+      "name": "Chin Chin Club",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1440,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105072063298014258385/photos\">My Travel Boektje</a>"
+          ],
+          "photo_reference": "CmRaAAAA5qSyBa6X7GbkP79N99nrk3RrRkkBmn15az7zNjNY8HiEXsKy-PoxK28RHG2BzYQRQAjfKgF76EndA_naeL1QCsvreL0PGUHOBHQa3efUSs-6Kqsc8wXTF6aHgSf0Q2sAEhBERYT0p5ykPsGe18RBFBtCGhTwJKTgIGStjxqYcqm9tyMGe02k0w",
+          "width": 2560
+        }
+      ],
+      "place_id": "ChIJu_wKgNsJxkcRcvWywIjFd4M",
+      "plus_code": {
+        "compound_code": "9VFH+3H Amsterdam, Netherlands",
+        "global_code": "9F469VFH+3H"
+      },
+      "rating": 3.6,
+      "reference": "ChIJu_wKgNsJxkcRcvWywIjFd4M",
+      "scope": "GOOGLE",
+      "types": [
+        "night_club",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 618,
+      "vicinity": "Rozengracht 133, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3742635,
+          "lng": 4.8740502
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3756388802915,
+            "lng": 4.875416780291502
+          },
+          "southwest": {
+            "lat": 52.3729409197085,
+            "lng": 4.872718819708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "f70c733682817ee5b334aa128e6fa866f15fccb0",
+      "name": "Café De Oude Schaeper",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115411383719024929844/photos\">Mariom Vargas</a>"
+          ],
+          "photo_reference": "CmRaAAAAcKluQeltEq0RVeG8D1_2YFcPYzqFjGV8qJVmGKNI7VmEJ_h-6y3bIFJaMuQzWz4V60Ctc9TBSFhqiedohp4FF4H1aargNjzNsGaxXFmvkS9lrZKjhyKXz5IO9bXs67-AEhArIloMC_fNYZDDfDsBOhKAGhTryFBeEf5JluPtHAdaCo933V1RcA",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJj6p6FdkJxkcRcYce7_kfEaM",
+      "plus_code": {
+        "compound_code": "9VFF+PJ Amsterdam, Netherlands",
+        "global_code": "9F469VFF+PJ"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJj6p6FdkJxkcRcYce7_kfEaM",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 168,
+      "vicinity": "Tweede Hugo de Grootstraat 19, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3771444,
+          "lng": 4.884261
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3784697302915,
+            "lng": 4.885623880291501
+          },
+          "southwest": {
+            "lat": 52.3757717697085,
+            "lng": 4.882925919708496
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "43ad3f807ce024b3d4b54c13632e864094e37410",
+      "name": "Mr Haz Taco Bar",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115508086537051822977/photos\">/dev/null</a>"
+          ],
+          "photo_reference": "CmRaAAAAId5fSeAibenxy5Ljy-FqckcLcFWoIbzYWDVqeNpH_z7MdOBzSA2cU7t4GhmeObisOJOlfRQnh8GUxuhiFwwZ604GUdynrewwXbJbl1t-G9nOY99yX7gsSo5-NpjlmWq_EhDwxqRNW6Ezb0aE4wx7ma6IGhRSmZV05TD4NobRLftiXJHaAJ9PgA",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJU85LW8UJxkcRMFSa-szmDBs",
+      "plus_code": {
+        "compound_code": "9VGM+VP Amsterdam, Netherlands",
+        "global_code": "9F469VGM+VP"
+      },
+      "price_level": 2,
+      "rating": 4.199999999999999,
+      "reference": "ChIJU85LW8UJxkcRMFSa-szmDBs",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 251,
+      "vicinity": "Egelantiersstraat 24, Amsterdam"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 52.3729236,
+          "lng": 4.876199199999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.3742817802915,
+            "lng": 4.877465180291502
+          },
+          "southwest": {
+            "lat": 52.3715838197085,
+            "lng": 4.874767219708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "190e3161a66267cd2311fd1c2c4b6ddd79877ede",
+      "name": "BR020",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103620964875484935520/photos\">BR020</a>"
+          ],
+          "photo_reference": "CmRaAAAAELycyZOOem-e8CoX-Z3nK0W6xFHi9C8DFEPdmwX_Q_IJMZ3BW_YM6TJ4R5gSN3Fy8Gg-ZRLVDwOjPA2dp-EaNugY1M9vhyl0nEM9ik-txKRFb6d9GRQtuT9TMale3EugEhDhOk05gg4Mk5V3KZTcrWnFGhToA1NxFXsG_Jfg1z6Rz7qbjJjfkg",
+          "width": 2992
+        }
+      ],
+      "place_id": "ChIJWcvb-NsJxkcRH32rlOv7aTw",
+      "plus_code": {
+        "compound_code": "9VFG+5F Amsterdam, Netherlands",
+        "global_code": "9F469VFG+5F"
+      },
+      "price_level": 2,
+      "rating": 4.8,
+      "reference": "ChIJWcvb-NsJxkcRH32rlOv7aTw",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 197,
+      "vicinity": "Marnixstraat 325H, Amsterdam"
+    }
+  ],
+  "status": "OK"
+}
