@@ -4,34 +4,34 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-internal data class ApiResult(
+internal data class ApiResponse(
     @Json(name = "next_page_token")
     val nextPageToken: String?,
-    val results: List<PlaceEntity>
+    val results: List<PlaceResponse>
 )
 
 @JsonClass(generateAdapter = true)
-internal data class PlaceEntity(
+internal data class PlaceResponse(
     val id: String,
-    val geometry: GeometryEntity,
+    val geometry: GeometryResponse,
     val name: String,
     @Json(name = "opening_hours")
-    val openingHours: OpeningHoursEntity = OpeningHoursEntity(false),
+    val openingHours: OpeningHoursResponse = OpeningHoursResponse(false),
     val rating: Double = 0.0,
     val vicinity: String
 )
 
-internal data class GeometryEntity(
-    val location: LocationEntity
+internal data class GeometryResponse(
+    val location: LocationResponse
 )
 
-internal data class LocationEntity(
+internal data class LocationResponse(
     val lat: Double,
     val lng: Double
 )
 
 @JsonClass(generateAdapter = true)
-internal data class OpeningHoursEntity(
+internal data class OpeningHoursResponse(
     @Json(name = "open_now")
     val openNow: Boolean
 )

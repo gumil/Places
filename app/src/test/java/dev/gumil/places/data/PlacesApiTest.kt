@@ -17,22 +17,22 @@ internal class PlacesApiTest {
     fun getNearby() = runBlocking {
         // 1. Setup
         mockServer.enqueue(createMockResponse(readFromFile("nearby.json")))
-        val expected = ApiResult(
+        val expected = ApiResponse(
             "testToken",
             listOf(
-                PlaceEntity(
+                PlaceResponse(
                     "e730d0cb50adb87001819ead2701303e0aef1258",
-                    GeometryEntity(LocationEntity(52.3760864, 4.880024100000001)),
+                    GeometryResponse(LocationResponse(52.3760864, 4.880024100000001)),
                     "Willemine Semeins Jazz vocalist en coach",
-                    OpeningHoursEntity(false),
+                    OpeningHoursResponse(false),
                     0.0,
                     "Egelantiersstraat 121-B, Amsterdam"
                 ),
-                PlaceEntity(
+                PlaceResponse(
                     "a0d53630e2182845a24ec0f74c0bce46b7716b27",
-                    GeometryEntity(LocationEntity(52.375233, 4.880817)),
+                    GeometryResponse(LocationResponse(52.375233, 4.880817)),
                     "Café De Nieuwe Lelie",
-                    OpeningHoursEntity(true),
+                    OpeningHoursResponse(true),
                     4.6,
                     "Nieuwe Leliestraat 83, Amsterdam"
 

@@ -10,5 +10,5 @@ internal interface PlacesApi {
     suspend fun getNearby(
         @Query("location") location: String,
         @Query("type") type: String
-    ): ApiResult
+    ): ApiResponse
 }
