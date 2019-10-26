@@ -26,14 +26,18 @@ internal class PlacesViewModel(
 
     private val uiScope = scope ?: CoroutineScope(Dispatchers.Main + job)
 
-    private var nextPageToken: String? = null
+    private var nextPageToken: String? = ""
 
     fun refresh(latitude: Double, longitude: Double, type: PlacesType) {
         loadNearby(latitude, longitude, type)
     }
 
     fun loadMore(latitude: Double, longitude: Double, type: PlacesType) {
-        loadNearby(latitude, longitude, type, State.Mode.LOAD_MORE, nextPageToken)
+        if (nextPageToken != null) {
+            loadNearby(latitude, longitude, type, State.Mode.LOAD_MORE, nextPageToken)
+            return
+        }
+        stateLiveData.postValue(State(emptyList(), State.Mode.LOAD_MORE))
     }
 
     private fun loadNearby(

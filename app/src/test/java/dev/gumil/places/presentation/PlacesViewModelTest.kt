@@ -58,7 +58,7 @@ internal class PlacesViewModelTest {
 
 
     @Test
-    fun `test load more`() = runBlocking {
+    fun `test load more when pagetoken is not null`() = runBlocking {
         // 1. Setup
         val viewModel = PlacesViewModel(fakeRepository, this)
         val mockFunction = mockk<() -> Unit>(relaxed = true)
@@ -84,6 +84,38 @@ internal class PlacesViewModelTest {
 
         // 2. Verification
         coVerify { mockObserver.onChanged(expected) }
+        confirmVerified(mockFunction)
+        confirmVerified(mockObserver)
+    }
+
+    @Test
+    fun `test load more when pagetoken is null`() = runBlocking {
+        // 1. Setup
+        val viewModel = PlacesViewModel(fakeRepository, this)
+        val mockFunction = mockk<() -> Unit>(relaxed = true)
+        val mockObserver = mockk<Observer<PlacesViewModel.State>>(relaxed = true)
+        viewModel.onError = mockFunction
+
+        // 2. Action
+        val observer = object : Observer<PlacesViewModel.State> {
+            override fun onChanged(t: PlacesViewModel.State?) {
+                viewModel.loadMore(0.0, 0.0, PlacesType.CAFE)
+                viewModel.state.observeForever(mockObserver)
+                viewModel.state.removeObserver(this)
+            }
+        }
+        viewModel.state.observeForever(observer)
+        viewModel.loadMore(0.0, 0.0, PlacesType.CAFE)
+
+        // 2. Verification
+        coVerify {
+            mockObserver.onChanged(
+                PlacesViewModel.State(
+                    emptyList(),
+                    PlacesViewModel.State.Mode.LOAD_MORE
+                )
+            )
+        }
         confirmVerified(mockFunction)
         confirmVerified(mockObserver)
     }
