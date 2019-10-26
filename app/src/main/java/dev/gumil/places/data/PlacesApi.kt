@@ -9,6 +9,7 @@ internal interface PlacesApi {
     @GET("/maps/api/place/nearbysearch/json?key=${BuildConfig.API_KEY}&rankby=distance")
     suspend fun getNearby(
         @Query("location") location: String,
-        @Query("type") type: String
+        @Query("type") type: String,
+        @Query("pagetoken") token: String = ""
     ): ApiResponse
 }
