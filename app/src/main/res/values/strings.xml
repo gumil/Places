@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Places</string>
+    <string name="empty_places">No places nearby</string>
 </resources>
