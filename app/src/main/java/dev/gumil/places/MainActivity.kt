@@ -5,8 +5,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.snackbar.Snackbar
 import dev.gumil.places.data.PlacesType
 import dev.gumil.places.presentation.PlacesViewModel
 import dev.gumil.places.presentation.list.PlacesListView
@@ -33,6 +35,12 @@ class MainActivity : AppCompatActivity() {
         PlacesListView(this)
     }
 
+    private val snackbar by lazy {
+        Snackbar.make(container, getString(R.string.error_message), Snackbar.LENGTH_SHORT).apply {
+            view.setBackgroundColor(ContextCompat.getColor(this@MainActivity, R.color.closed))
+        }
+    }
+
     private var selectedType = PlacesType.CAFE
         set(value) {
             field = value
@@ -45,6 +53,10 @@ class MainActivity : AppCompatActivity() {
         title = getString(R.string.menu_cafe)
 
         container.addView(placesListView)
+
+        placesViewModel.onError = {
+            snackbar.show()
+        }
 
         placesListView.loadingListener = {
             when (it) {

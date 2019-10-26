@@ -6,4 +6,5 @@
     <string name="open">Open</string>
     <string name="closed">Closed</string>
     <string name="empty_places">No places nearby</string>
+    <string name="error_message">Something went wrong! Failed to load places!</string>
 </resources>
