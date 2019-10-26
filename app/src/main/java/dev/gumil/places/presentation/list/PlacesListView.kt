@@ -7,7 +7,6 @@ import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import dev.gumil.places.R
 import dev.gumil.places.domain.Place
@@ -41,6 +40,10 @@ internal class PlacesListView @JvmOverloads constructor(
 
     private val adapter = ItemAdapter(PlaceViewItem()).apply {
         footerItem = FooterViewItem()
+        onPrefetch = {
+            showFooter()
+            loadingListener(PlacesViewModel.State.Mode.LOAD_MORE)
+        }
     }
 
     private var isLoading = true
@@ -52,36 +55,24 @@ internal class PlacesListView @JvmOverloads constructor(
     }
 
     fun render(state: PlacesViewModel.State) {
-        showList(state.list)
 
         when (state.loadingMode) {
             PlacesViewModel.State.Mode.REFRESH -> {
                 adapter.list = state.list
                 swipeRefreshLayout.isRefreshing = false
+                isLoading = false
+                showList(state.list)
             }
-            PlacesViewModel.State.Mode.LOAD_MORE -> TODO()
+            PlacesViewModel.State.Mode.LOAD_MORE -> {
+                adapter.addItems(state.list)
+                isLoading = false
+            }
         }
     }
 
     private fun initializeList() {
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy > 0 && !isLoading) {
-                    val layoutManager = recyclerView.layoutManager as StaggeredGridLayoutManager
-                    val visibleItemCount = recyclerView.childCount
-                    val totalItemCount = layoutManager.itemCount
-                    val firstVisibleItem = layoutManager.findFirstVisibleItemPositions(null).first()
-
-                    totalItemCount - visibleItemCount <= firstVisibleItem + VISIBLE_THRESHOLD
-                    loadingListener(PlacesViewModel.State.Mode.LOAD_MORE)
-                    isLoading = true
-                }
-            }
-        })
-
         recyclerView.adapter = adapter
-
         swipeRefreshLayout.setOnRefreshListener {
             loadingListener(PlacesViewModel.State.Mode.REFRESH)
         }
@@ -91,9 +82,4 @@ internal class PlacesListView @JvmOverloads constructor(
         swipeRefreshLayout.isVisible = list.isNotEmpty()
         emptyView.isVisible = list.isEmpty()
     }
-
-    companion object {
-        private const val VISIBLE_THRESHOLD = 2
-    }
 }
-

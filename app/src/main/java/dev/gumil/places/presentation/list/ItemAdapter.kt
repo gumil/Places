@@ -1,11 +1,13 @@
 package dev.gumil.places.presentation.list
 
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 internal class ItemAdapter<M>(
-    private val defaultItem: ViewItem<M>
+    private val defaultItem: ViewItem<M>,
+    private val prefetchDistance: Int = 2
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var footerItem: ViewItem<*>? = null
@@ -16,12 +18,15 @@ internal class ItemAdapter<M>(
         get() = _list
         set(value) {
             _list = value.toMutableList()
+            currentListSize = 0
             notifyDataSetChanged()
         }
 
     private var _list: MutableList<M> = mutableListOf()
 
-    private val currentListSize get() = _list.size
+    private var currentListSize = 0
+
+    var onPrefetch: (() -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
         object : RecyclerView.ViewHolder(
@@ -35,6 +40,13 @@ internal class ItemAdapter<M>(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (position < _list.size) {
             defaultItem.bind(holder.itemView, _list[position])
+        }
+
+        if (_list.size > currentListSize && position == (_list.size - prefetchDistance)) {
+            currentListSize = _list.size
+            Handler().post {
+                onPrefetch?.invoke()
+            }
         }
     }
 
@@ -50,16 +62,13 @@ internal class ItemAdapter<M>(
 
     fun showFooter() {
         _footerItem = footerItem
-        notifyItemInserted(currentListSize)
+        notifyItemInserted(currentListSize + 1)
     }
 
     fun addItems(items: List<M>) {
         _footerItem = null
-
-        if (items.size == _list.size) return
-
-        _list.addAll(items.minus(_list))
-        notifyItemRangeChanged(currentListSize - 1, currentListSize + 1)
+        _list.addAll(items)
+        notifyItemChanged(currentListSize)
         notifyItemRangeInserted(currentListSize + 1, currentListSize + items.size)
     }
 }
