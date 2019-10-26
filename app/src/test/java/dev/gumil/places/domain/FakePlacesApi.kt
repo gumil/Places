@@ -3,7 +3,7 @@ package dev.gumil.places.domain
 import dev.gumil.places.data.*
 
 internal class FakePlacesApi: PlacesApi {
-    override suspend fun getNearby(location: String, type: String, token: String): ApiResponse {
+    override suspend fun getNearby(location: String, type: String, token: String?): ApiResponse {
         return when (type) {
             PlacesType.BAR.toString() -> {
                 ApiResponse(

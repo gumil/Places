@@ -8,6 +8,6 @@ internal interface PlacesRepository {
         latitude: Double,
         longitude: Double,
         type: PlacesType,
-        pageToken: String = ""
+        pageToken: String? = null
     ) : Places
 }

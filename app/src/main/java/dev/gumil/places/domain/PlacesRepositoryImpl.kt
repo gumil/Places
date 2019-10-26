@@ -13,7 +13,7 @@ internal class PlacesRepositoryImpl(
         latitude: Double,
         longitude: Double,
         type: PlacesType,
-        pageToken: String
+        pageToken: String?
     ): Places {
         val response = placesApi.getNearby("$latitude,$longitude", type.toString(), pageToken)
 

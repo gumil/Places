@@ -10,6 +10,6 @@ internal interface PlacesApi {
     suspend fun getNearby(
         @Query("location") location: String,
         @Query("type") type: String,
-        @Query("pagetoken") token: String = ""
+        @Query("pagetoken") token: String? = null
     ): ApiResponse
 }
