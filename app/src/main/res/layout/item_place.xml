@@ -24,13 +24,23 @@
             tools:text="Restaurant Name" />
 
         <TextView
-            android:id="@+id/item_text_rating"
+            android:id="@+id/item_vicinity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/item_name"
+            tools:text="Tweede Marnixplantsoen 1, Amsterdam" />
+
+        <TextView
+            android:id="@+id/item_text_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_vicinity"
             tools:text="3.8" />
 
         <RatingBar
@@ -38,9 +48,9 @@
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:isIndicator="true"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:isIndicator="true"
             app:layout_constraintBottom_toBottomOf="@id/item_text_rating"
             app:layout_constraintLeft_toRightOf="@id/item_text_rating"
             app:layout_constraintTop_toTopOf="@id/item_text_rating" />

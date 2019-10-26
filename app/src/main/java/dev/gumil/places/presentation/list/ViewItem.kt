@@ -20,12 +20,14 @@ internal class PlaceViewItem : ViewItem<Place> {
 
     override fun bind(view: View, item: Place) {
         val name = view.findViewById<TextView>(R.id.item_name)
+        val vicinity = view.findViewById<TextView>(R.id.item_vicinity)
         val rating = view.findViewById<TextView>(R.id.item_text_rating)
         val ratingBar = view.findViewById<RatingBar>(R.id.item_ratingBar)
         val open = view.findViewById<TextView>(R.id.item_open)
         val distance = view.findViewById<TextView>(R.id.item_distance)
 
         name.text = item.name
+        vicinity.text = item.vicinity
         rating.text = String.format("%.1f", item.rating)
         ratingBar.rating = item.rating.toFloat()
         formatOpen(open, item.isOpen)
