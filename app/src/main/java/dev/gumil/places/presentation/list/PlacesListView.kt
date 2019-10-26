@@ -18,6 +18,13 @@ internal class PlacesListView @JvmOverloads constructor(
     attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
 
+    var isRefreshing
+        get() = swipeRefreshLayout.isRefreshing
+        set(value) {
+            swipeRefreshLayout.isRefreshing = value
+            loadingListener(PlacesViewModel.State.Mode.REFRESH)
+        }
+
     var loadingListener: (mode: PlacesViewModel.State.Mode) -> Unit = {}
 
     private val swipeRefreshLayout by lazy {
@@ -48,7 +55,10 @@ internal class PlacesListView @JvmOverloads constructor(
         showList(state.list)
 
         when (state.loadingMode) {
-            PlacesViewModel.State.Mode.REFRESH -> adapter.list = state.list
+            PlacesViewModel.State.Mode.REFRESH -> {
+                adapter.list = state.list
+                swipeRefreshLayout.isRefreshing = false
+            }
             PlacesViewModel.State.Mode.LOAD_MORE -> TODO()
         }
     }

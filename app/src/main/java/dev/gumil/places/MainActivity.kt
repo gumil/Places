@@ -56,6 +56,6 @@ class MainActivity : AppCompatActivity() {
             placesListView.render(it)
         })
 
-        placesViewModel.refresh(52.3760508, 4.8788894, PlacesType.BAR)
+        placesListView.isRefreshing = true
     }
 }
