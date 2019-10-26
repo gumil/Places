@@ -3,7 +3,7 @@ package dev.gumil.places.data
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
-import org.junit.Assert.assertEquals
+import org.junit.Assert.*
 import org.junit.Test
 import java.io.ByteArrayOutputStream
 
@@ -37,7 +37,8 @@ internal class PlacesApiTest {
                     "Nieuwe Leliestraat 83, Amsterdam"
 
                 )
-            )
+            ),
+            "OK"
         )
 
         // 2. Action
@@ -57,6 +58,19 @@ internal class PlacesApiTest {
 
         // 3. Verification
         assertEquals(20, apiResult.results.size)
+    }
+
+    @Test
+    fun testError() = runBlocking {
+        // 1. Setup
+        mockServer.enqueue(createMockResponse(readFromFile("error.json")))
+
+        // 2. Action
+        val apiResult = placesApi.getNearby("52.3760508,4.8788894", "bar")
+
+        // 3. Verification
+        assertNotEquals(RESPONSE_SUCCESS, apiResult.status)
+        assertTrue(apiResult.results.isEmpty())
     }
 
     private fun readFromFile(file: String): String {

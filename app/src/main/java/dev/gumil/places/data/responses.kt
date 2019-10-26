@@ -3,11 +3,14 @@ package dev.gumil.places.data
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+internal const val RESPONSE_SUCCESS = "OK"
+
 @JsonClass(generateAdapter = true)
 internal data class ApiResponse(
     @Json(name = "next_page_token")
     val nextPageToken: String?,
-    val results: List<PlaceResponse>
+    val results: List<PlaceResponse>,
+    val status: String
 )
 
 @JsonClass(generateAdapter = true)
