@@ -32,11 +32,25 @@ internal class PlacesListView @JvmOverloads constructor(
         findViewById<View>(R.id.text_empty_places)
     }
 
+    private val adapter = ItemAdapter(PlaceViewItem()).apply {
+        footerItem = FooterViewItem()
+    }
+
     private var isLoading = true
 
     init {
         View.inflate(context, R.layout.view_places_list, this)
-        showList(emptyList())
+
+        initializeList()
+    }
+
+    fun render(state: PlacesViewModel.State) {
+        showList(state.list)
+
+        when (state.loadingMode) {
+            PlacesViewModel.State.Mode.REFRESH -> adapter.list = state.list
+            PlacesViewModel.State.Mode.LOAD_MORE -> TODO()
+        }
     }
 
     private fun initializeList() {
@@ -55,6 +69,8 @@ internal class PlacesListView @JvmOverloads constructor(
                 }
             }
         })
+
+        recyclerView.adapter = adapter
 
         swipeRefreshLayout.setOnRefreshListener {
             loadingListener(PlacesViewModel.State.Mode.REFRESH)
