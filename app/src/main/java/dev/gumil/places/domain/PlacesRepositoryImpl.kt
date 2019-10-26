@@ -2,7 +2,7 @@ package dev.gumil.places.domain
 
 import dev.gumil.places.data.PlacesApi
 import dev.gumil.places.data.PlacesType
-import dev.gumil.places.data.RESPONSE_SUCCESS
+import dev.gumil.places.data.ResponseCode
 import dev.gumil.places.data.ResponseException
 
 internal class PlacesRepositoryImpl(
@@ -17,7 +17,7 @@ internal class PlacesRepositoryImpl(
     ): Places {
         val response = placesApi.getNearby("$latitude,$longitude", type.toString(), pageToken)
 
-        if (response.status != RESPONSE_SUCCESS) throw ResponseException()
+        if (response.status != ResponseCode.SUCCESS.code) throw ResponseException()
 
         return response.nextPageToken to response.results.map {
             Place(

@@ -69,7 +69,7 @@ internal class PlacesApiTest {
         val apiResult = placesApi.getNearby("52.3760508,4.8788894", "bar")
 
         // 3. Verification
-        assertNotEquals(RESPONSE_SUCCESS, apiResult.status)
+        assertNotEquals(ResponseCode.SUCCESS.code, apiResult.status)
         assertTrue(apiResult.results.isEmpty())
     }
 

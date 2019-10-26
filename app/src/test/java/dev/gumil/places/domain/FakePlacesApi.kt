@@ -27,7 +27,7 @@ internal class FakePlacesApi: PlacesApi {
 
                         )
                     ),
-                    RESPONSE_SUCCESS
+                    ResponseCode.SUCCESS.code
                 )
             }
             PlacesType.CAFE.toString() -> {
@@ -43,7 +43,7 @@ internal class FakePlacesApi: PlacesApi {
                             "Egelantiersstraat 121-B, Amsterdam"
                         )
                     ),
-                    RESPONSE_SUCCESS
+                    ResponseCode.SUCCESS.code
                 )
             }
             else -> {

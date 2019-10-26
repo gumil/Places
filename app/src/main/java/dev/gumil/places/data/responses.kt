@@ -3,7 +3,11 @@ package dev.gumil.places.data
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
-internal const val RESPONSE_SUCCESS = "OK"
+
+enum class ResponseCode(val code: String) {
+    SUCCESS("OK"),
+    INVALID("INVALID_REQUEST")
+}
 
 @JsonClass(generateAdapter = true)
 internal data class ApiResponse(
