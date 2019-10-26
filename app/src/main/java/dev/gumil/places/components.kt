@@ -6,6 +6,8 @@ import dev.gumil.places.data.ApiFactory
 import dev.gumil.places.data.PlacesApi
 import dev.gumil.places.domain.PlacesRepository
 import dev.gumil.places.domain.PlacesRepositoryImpl
+import dev.gumil.places.presentation.DistanceCalculator
+import dev.gumil.places.presentation.DistanceCalculatorImpl
 import dev.gumil.places.presentation.PlacesViewModel
 
 internal interface AppComponent {
@@ -28,6 +30,8 @@ internal class AppComponentImpl : AppComponent {
 
 internal interface ActivityComponent {
 
+    val distanceCalculator: DistanceCalculator
+
     val placesViewModel: PlacesViewModel
 
     val viewModelFactory: ViewModelProvider.Factory
@@ -37,8 +41,12 @@ internal class ActivityComponentImpl(
     appComponent: AppComponent
 ) : ActivityComponent, AppComponent by appComponent {
 
+    override val distanceCalculator: DistanceCalculator by lazy {
+        DistanceCalculatorImpl()
+    }
+
     override val placesViewModel: PlacesViewModel by lazy {
-        PlacesViewModel(repository)
+        PlacesViewModel(repository, distanceCalculator)
     }
 
     override val viewModelFactory: ViewModelProvider.Factory by lazy {

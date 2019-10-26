@@ -17,10 +17,21 @@ internal class PlacesViewModelTest {
 
     private val fakeRepository = FakePlacesRepository()
 
+    private val distanceCalculator = object : DistanceCalculator {
+        override fun sortByDistance(
+            latitude: Double,
+            longitude: Double,
+            places: List<Place>
+        ): List<Place> {
+            return places
+        }
+
+    }
+
     @Test
     fun `test refresh`() = runBlocking {
         // 1. Setup
-        val viewModel = PlacesViewModel(fakeRepository, this)
+        val viewModel = PlacesViewModel(fakeRepository, distanceCalculator, this)
         val mockFunction = mockk<() -> Unit>(relaxed = true)
         val mockObserver = mockk<Observer<PlacesViewModel.State>>(relaxed = true)
         viewModel.onError = mockFunction
@@ -60,7 +71,7 @@ internal class PlacesViewModelTest {
     @Test
     fun `test load more when pagetoken is not null`() = runBlocking {
         // 1. Setup
-        val viewModel = PlacesViewModel(fakeRepository, this)
+        val viewModel = PlacesViewModel(fakeRepository, distanceCalculator, this)
         val mockFunction = mockk<() -> Unit>(relaxed = true)
         val mockObserver = mockk<Observer<PlacesViewModel.State>>(relaxed = true)
         viewModel.onError = mockFunction
@@ -91,7 +102,7 @@ internal class PlacesViewModelTest {
     @Test
     fun `test load more when pagetoken is null`() = runBlocking {
         // 1. Setup
-        val viewModel = PlacesViewModel(fakeRepository, this)
+        val viewModel = PlacesViewModel(fakeRepository, distanceCalculator, this)
         val mockFunction = mockk<() -> Unit>(relaxed = true)
         val mockObserver = mockk<Observer<PlacesViewModel.State>>(relaxed = true)
         viewModel.onError = mockFunction
@@ -123,7 +134,7 @@ internal class PlacesViewModelTest {
     @Test
     fun `test handle error`() = runBlocking {
         // 1. Setup
-        val viewModel = PlacesViewModel(fakeRepository, this)
+        val viewModel = PlacesViewModel(fakeRepository, distanceCalculator, this)
         val mockFunction = mockk<() -> Unit>(relaxed = true)
         val mockObserver = mockk<Observer<PlacesViewModel.State>>(relaxed = true)
         viewModel.onError = mockFunction

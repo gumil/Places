@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 
 internal class PlacesViewModel(
     private val placesRepository: PlacesRepository,
+    private val distanceCalculator: DistanceCalculator,
     scope: CoroutineScope? = null
 ) : ViewModel() {
 
@@ -51,7 +52,8 @@ internal class PlacesViewModel(
             try {
                 val places = placesRepository.getNearby(latitude, longitude, type, token)
                 nextPageToken = places.first
-                stateLiveData.postValue(State(places.second, mode))
+                val list = distanceCalculator.sortByDistance(latitude, longitude, places.second)
+                stateLiveData.postValue(State(list, mode))
             } catch (e: Throwable) {
                 onError()
             }

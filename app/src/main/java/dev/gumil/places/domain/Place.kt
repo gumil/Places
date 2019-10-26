@@ -6,7 +6,8 @@ internal data class Place(
     val name: String,
     val isOpen: Boolean,
     val rating: Double,
-    val vicinity: String
+    val vicinity: String,
+    val distance: Float = 0f
 )
 
 internal typealias Places = Pair<String?, List<Place>>

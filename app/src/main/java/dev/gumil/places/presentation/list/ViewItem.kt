@@ -29,7 +29,7 @@ internal class PlaceViewItem : ViewItem<Place> {
         rating.text = String.format("%.1f", item.rating)
         ratingBar.rating = item.rating.toFloat()
         formatOpen(open, item.isOpen)
-        distance.text = "4.4km"
+        distance.text = String.format("%.1f m", item.distance)
     }
 
     private fun formatOpen(textView: TextView, isOpen: Boolean) {
