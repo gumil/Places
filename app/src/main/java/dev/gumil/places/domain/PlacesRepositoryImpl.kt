@@ -4,6 +4,7 @@ import dev.gumil.places.data.PlacesApi
 import dev.gumil.places.data.PlacesType
 import dev.gumil.places.data.ResponseCode
 import dev.gumil.places.data.ResponseException
+import kotlinx.coroutines.delay
 
 internal class PlacesRepositoryImpl(
     private val placesApi: PlacesApi
@@ -17,7 +18,18 @@ internal class PlacesRepositoryImpl(
     ): Places {
         val response = placesApi.getNearby("$latitude,$longitude", type.toString(), pageToken)
 
-        if (response.status != ResponseCode.SUCCESS.code) throw ResponseException()
+        when (response.status) {
+            ResponseCode.INVALID.code -> {
+                // The request can fail when requests come in succession
+                // Retry after 0.5 second
+                delay(500L)
+                return getNearby(latitude, longitude, type, pageToken)
+            }
+            ResponseCode.SUCCESS.code -> {
+                // do nothing
+            }
+            else -> throw ResponseException()
+        }
 
         return response.nextPageToken to response.results.map {
             Place(
