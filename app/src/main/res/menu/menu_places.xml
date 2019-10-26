@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_cafe"
+        android:title="@string/menu_cafe"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_bar"
+        android:title="@string/menu_bar"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_restaurant"
+        android:title="@string/menu_restaurant"
+        app:showAsAction="never" />
+</menu>

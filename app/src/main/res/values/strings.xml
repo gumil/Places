@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Places</string>
+    <string name="menu_cafe">Cafes</string>
+    <string name="menu_bar">Bars</string>
+    <string name="menu_restaurant">Restaurants</string>
     <string name="open">Open</string>
     <string name="closed">Closed</string>
     <string name="empty_places">No places nearby</string>

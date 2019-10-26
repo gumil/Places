@@ -1,6 +1,8 @@
 package dev.gumil.places
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -31,9 +33,16 @@ class MainActivity : AppCompatActivity() {
         PlacesListView(this)
     }
 
+    private var selectedType = PlacesType.CAFE
+        set(value) {
+            field = value
+            placesListView.isRefreshing = true
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        title = getString(R.string.menu_cafe)
 
         container.addView(placesListView)
 
@@ -42,12 +51,12 @@ class MainActivity : AppCompatActivity() {
                 PlacesViewModel.State.Mode.REFRESH -> placesViewModel.refresh(
                     52.3760508,
                     4.8788894,
-                    PlacesType.BAR
+                    selectedType
                 )
                 PlacesViewModel.State.Mode.LOAD_MORE -> placesViewModel.loadMore(
                     52.3760508,
                     4.8788894,
-                    PlacesType.BAR
+                    selectedType
                 )
             }
         }
@@ -57,5 +66,28 @@ class MainActivity : AppCompatActivity() {
         })
 
         placesListView.isRefreshing = true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_places, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        selectedType = when (item.itemId) {
+            R.id.menu_cafe -> {
+                PlacesType.CAFE
+            }
+            R.id.menu_bar -> {
+                PlacesType.BAR
+            }
+            R.id.menu_restaurant -> {
+                PlacesType.RESTAURANT
+            }
+            else -> return false
+        }
+
+        title = item.title
+        return true
     }
 }
