@@ -1,11 +1,15 @@
 package dev.gumil.places
 
+import android.location.Location
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.snackbar.Snackbar
@@ -31,6 +35,10 @@ class MainActivity : AppCompatActivity() {
         findViewById<ViewGroup>(R.id.container_main)
     }
 
+    private val textPermissionNotGranted by lazy {
+        findViewById<TextView>(R.id.text_permission_not_granted)
+    }
+
     private val placesListView by lazy {
         PlacesListView(this)
     }
@@ -39,6 +47,19 @@ class MainActivity : AppCompatActivity() {
         Snackbar.make(container, getString(R.string.error_message), Snackbar.LENGTH_SHORT).apply {
             view.setBackgroundColor(ContextCompat.getColor(this@MainActivity, R.color.closed))
         }
+    }
+
+    private val permissionsHelper by lazy {
+        PermissionsHelper(this, {
+            loadLocation(false)
+        }, {
+            loadLocation(true)
+        })
+    }
+
+    private var location = Location("default").apply {
+        latitude = 52.3760508
+        longitude = 4.8788894
     }
 
     private var selectedType = PlacesType.CAFE
@@ -52,32 +73,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         title = getString(R.string.menu_cafe)
 
-        container.addView(placesListView)
+        initializeViews()
 
-        placesViewModel.onError = {
-            snackbar.show()
-        }
+        initializeViewModel()
 
-        placesListView.loadingListener = {
-            when (it) {
-                PlacesViewModel.State.Mode.REFRESH -> placesViewModel.refresh(
-                    52.3760508,
-                    4.8788894,
-                    selectedType
-                )
-                PlacesViewModel.State.Mode.LOAD_MORE -> placesViewModel.loadMore(
-                    52.3760508,
-                    4.8788894,
-                    selectedType
-                )
-            }
-        }
-
-        placesViewModel.state.observe(this, Observer {
-            placesListView.render(it)
-        })
-
-        placesListView.isRefreshing = true
+        permissionsHelper.checkPermissions()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -101,5 +101,53 @@ class MainActivity : AppCompatActivity() {
 
         title = item.title
         return true
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        permissionsHelper.onRequestPermissionsResult(requestCode, grantResults)
+    }
+
+    private fun loadLocation(useDefault: Boolean) {
+        textPermissionNotGranted.isVisible = useDefault
+        placesListView.isRefreshing = true
+    }
+
+    private fun initializeViews() {
+        container.addView(placesListView)
+
+        placesListView.loadingListener = {
+            when (it) {
+                PlacesViewModel.State.Mode.REFRESH -> placesViewModel.refresh(
+                    location.latitude,
+                    location.longitude,
+                    selectedType
+                )
+                PlacesViewModel.State.Mode.LOAD_MORE -> placesViewModel.loadMore(
+                    location.latitude,
+                    location.longitude,
+                    selectedType
+                )
+            }
+        }
+
+        textPermissionNotGranted.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                permissionsHelper.requestPermission()
+            }
+        }
+    }
+
+    private fun initializeViewModel() {
+        placesViewModel.onError = {
+            snackbar.show()
+        }
+
+        placesViewModel.state.observe(this, Observer {
+            placesListView.render(it)
+        })
     }
 }
