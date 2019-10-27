@@ -1,6 +1,7 @@
 package dev.gumil.places.domain
 
 internal data class Place(
+    val id: String,
     val latitude: Double,
     val longitude: Double,
     val name: String,

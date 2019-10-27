@@ -22,6 +22,7 @@ internal class PlacesRepositoryImplTest {
         // 1. Setup
         val places = listOf(
             Place(
+                "test_api_bar_1",
                 52.3760864,
                 4.880024100000001,
                 "Willemine Semeins Jazz vocalist en coach",
@@ -30,6 +31,7 @@ internal class PlacesRepositoryImplTest {
                 "Egelantiersstraat 121-B, Amsterdam"
             ),
             Place(
+                "test_api_bar_2",
                 52.375233,
                 4.880817,
                 "Café De Nieuwe Lelie",
@@ -53,6 +55,7 @@ internal class PlacesRepositoryImplTest {
         // 1. Setup
         val places = listOf(
             Place(
+                "test_api_cafe",
                 52.3760864,
                 4.880024100000001,
                 "Willemine Semeins Jazz vocalist en coach",

@@ -10,7 +10,7 @@ internal class FakePlacesApi: PlacesApi {
                     "testToken",
                     listOf(
                         PlaceResponse(
-                            "e730d0cb50adb87001819ead2701303e0aef1258",
+                            "test_api_bar_1",
                             GeometryResponse(LocationResponse(52.3760864, 4.880024100000001)),
                             "Willemine Semeins Jazz vocalist en coach",
                             OpeningHoursResponse(false),
@@ -18,7 +18,7 @@ internal class FakePlacesApi: PlacesApi {
                             "Egelantiersstraat 121-B, Amsterdam"
                         ),
                         PlaceResponse(
-                            "a0d53630e2182845a24ec0f74c0bce46b7716b27",
+                            "test_api_bar_2",
                             GeometryResponse(LocationResponse(52.375233, 4.880817)),
                             "Café De Nieuwe Lelie",
                             OpeningHoursResponse(true),
@@ -35,7 +35,7 @@ internal class FakePlacesApi: PlacesApi {
                     null,
                     listOf(
                         PlaceResponse(
-                            "e730d0cb50adb87001819ead2701303e0aef1258",
+                            "test_api_cafe",
                             GeometryResponse(LocationResponse(52.3760864, 4.880024100000001)),
                             "Willemine Semeins Jazz vocalist en coach",
                             OpeningHoursResponse(false),

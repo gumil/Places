@@ -33,6 +33,7 @@ internal class PlacesRepositoryImpl(
 
         return response.nextPageToken to response.results.map {
             Place(
+                it.id,
                 it.geometry.location.lat,
                 it.geometry.location.lng,
                 it.name,

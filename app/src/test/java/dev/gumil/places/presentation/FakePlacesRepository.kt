@@ -17,6 +17,7 @@ internal class FakePlacesRepository : PlacesRepository {
             PlacesType.BAR -> {
                 val places = listOf(
                     Place(
+                        "test_id_bar_1",
                         52.3760864,
                         4.880024100000001,
                         "Willemine Semeins Jazz vocalist en coach",
@@ -25,6 +26,7 @@ internal class FakePlacesRepository : PlacesRepository {
                         "Egelantiersstraat 121-B, Amsterdam"
                     ),
                     Place(
+                        "test_id_bar_2",
                         52.375233,
                         4.880817,
                         "Café De Nieuwe Lelie",
@@ -39,6 +41,7 @@ internal class FakePlacesRepository : PlacesRepository {
             PlacesType.CAFE -> {
                 val places = listOf(
                     Place(
+                        "test_id_cafe",
                         52.3760864,
                         4.880024100000001,
                         "Willemine Semeins Jazz vocalist en coach",
