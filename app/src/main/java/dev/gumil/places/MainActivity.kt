@@ -14,6 +14,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.snackbar.Snackbar
 import dev.gumil.places.data.PlacesType
+import dev.gumil.places.presentation.LocationObserver
 import dev.gumil.places.presentation.PlacesViewModel
 import dev.gumil.places.presentation.list.PlacesListView
 
@@ -78,6 +79,11 @@ class MainActivity : AppCompatActivity() {
         initializeViewModel()
 
         permissionsHelper.checkPermissions()
+
+        lifecycle.addObserver(LocationObserver(this) {
+            location = it
+            placesListView.isRefreshing = true
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -113,7 +119,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadLocation(useDefault: Boolean) {
         textPermissionNotGranted.isVisible = useDefault
-        placesListView.isRefreshing = true
+        if (useDefault) {
+            placesListView.isRefreshing = true
+        }
     }
 
     private fun initializeViews() {

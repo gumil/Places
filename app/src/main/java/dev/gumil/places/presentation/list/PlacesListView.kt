@@ -76,6 +76,7 @@ internal class PlacesListView @JvmOverloads constructor(
         swipeRefreshLayout.setOnRefreshListener {
             loadingListener(PlacesViewModel.State.Mode.REFRESH)
         }
+        swipeRefreshLayout.isRefreshing = true
     }
 
     private fun showList(list: List<Place>) {
