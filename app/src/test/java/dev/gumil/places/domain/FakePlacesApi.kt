@@ -1,9 +1,14 @@
 package dev.gumil.places.domain
 
 import dev.gumil.places.data.*
+import java.io.IOException
 
 internal class FakePlacesApi: PlacesApi {
     override suspend fun getNearby(location: String, type: String, token: String?): ApiResponse {
+        if (token?.isBlank() == true) {
+            throw IOException()
+        }
+
         return when (type) {
             PlacesType.BAR.toString() -> {
                 ApiResponse(

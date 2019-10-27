@@ -1,9 +1,12 @@
 package dev.gumil.places
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.room.Room
 import dev.gumil.places.data.ApiFactory
 import dev.gumil.places.data.PlacesApi
+import dev.gumil.places.db.PlaceDatabase
 import dev.gumil.places.domain.PlacesRepository
 import dev.gumil.places.domain.PlacesRepositoryImpl
 import dev.gumil.places.presentation.DistanceCalculator
@@ -12,19 +15,33 @@ import dev.gumil.places.presentation.PlacesViewModel
 
 internal interface AppComponent {
 
-    val repository: PlacesRepository
+    val appContext: Context
 
     val placesApi: PlacesApi
+
+    val placeDatabase: PlaceDatabase
+
+    val repository: PlacesRepository
 }
 
-internal class AppComponentImpl : AppComponent {
+internal class AppComponentImpl(
+    override val appContext: Context
+) : AppComponent {
 
     override val placesApi: PlacesApi by lazy {
         ApiFactory.create()
     }
 
+    override val placeDatabase: PlaceDatabase by lazy {
+        Room.databaseBuilder(
+            appContext,
+            PlaceDatabase::class.java,
+            "placedatabase"
+        ).build()
+    }
+
     override val repository: PlacesRepository by lazy {
-        PlacesRepositoryImpl(placesApi)
+        PlacesRepositoryImpl(placesApi, placeDatabase.placeDao())
     }
 }
 
