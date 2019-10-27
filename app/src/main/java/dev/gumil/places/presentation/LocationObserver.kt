@@ -13,7 +13,7 @@ import com.google.android.gms.location.LocationServices
 
 internal class LocationObserver(
     context: Context,
-    private val onLocationRequested: (Location) -> Unit = {}
+    private var onLocationRequested: ((Location) -> Unit)? = {}
 ) : LifecycleObserver {
 
     private val locationClient = LocationServices.getFusedLocationProviderClient(context)
@@ -22,7 +22,7 @@ internal class LocationObserver(
         object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {
                 locationResult?.let {
-                    onLocationRequested(it.lastLocation)
+                    onLocationRequested?.invoke(it.lastLocation)
                 }
             }
         }
@@ -44,6 +44,11 @@ internal class LocationObserver(
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun stopListener() {
         locationClient.removeLocationUpdates(locationCallback)
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    fun destroy() {
+        onLocationRequested = null
     }
 
     companion object {
