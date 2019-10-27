@@ -145,6 +145,14 @@ internal class PlacesViewModelTest {
 
         // 2. Verification
         coVerify(exactly = 1) { mockFunction.invoke() }
+        coVerify(exactly = 1) {
+            mockObserver.onChanged(
+                PlacesViewModel.State(
+                    emptyList(),
+                    PlacesViewModel.State.Mode.REFRESH
+                )
+            )
+        }
         confirmVerified(mockFunction)
         confirmVerified(mockObserver)
     }

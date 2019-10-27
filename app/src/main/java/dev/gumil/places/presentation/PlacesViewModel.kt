@@ -56,6 +56,7 @@ internal class PlacesViewModel(
                 stateLiveData.postValue(State(list, mode))
             } catch (e: Throwable) {
                 onError()
+                stateLiveData.postValue(State(emptyList(), mode))
             }
         }
     }
