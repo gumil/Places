@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     private var selectedType = PlacesType.CAFE
         set(value) {
             field = value
-            placesListView.isRefreshing = true
+            placesListView.refresh()
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
         lifecycle.addObserver(LocationObserver(this) {
             location = it
-            placesListView.isRefreshing = true
+            placesListView.refresh()
         })
     }
 
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
     private fun loadLocation(useDefault: Boolean) {
         textPermissionNotGranted.isVisible = useDefault
         if (useDefault) {
-            placesListView.isRefreshing = true
+            placesListView.refresh()
         }
     }
 
