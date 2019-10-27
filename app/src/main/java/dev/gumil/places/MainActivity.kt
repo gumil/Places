@@ -1,5 +1,6 @@
 package dev.gumil.places
 
+import android.content.Context
 import android.location.Location
 import android.os.Build
 import android.os.Bundle
@@ -58,10 +59,11 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private var location = Location("default").apply {
-        latitude = 52.3760508
-        longitude = 4.8788894
+    private val prefs by lazy {
+        getPreferences(Context.MODE_PRIVATE)
     }
+
+    private lateinit var location: Location
 
     private var selectedType = PlacesType.CAFE
         set(value) {
@@ -74,6 +76,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         title = getString(R.string.menu_cafe)
 
+        location = Location("initial").apply {
+            latitude = prefs.getFloat(PREF_LAT, DEFAULT_LATITUDE).toDouble()
+            longitude = prefs.getFloat(PREF_LNG, DEFAULT_LONGITUDE).toDouble()
+        }
+
         initializeViews()
 
         initializeViewModel()
@@ -83,6 +90,10 @@ class MainActivity : AppCompatActivity() {
         lifecycle.addObserver(LocationObserver(this) {
             location = it
             placesListView.refresh()
+            prefs.edit()
+                .putFloat(PREF_LAT, it.latitude.toFloat())
+                .putFloat(PREF_LNG, it.longitude.toFloat())
+                .apply()
         })
     }
 
@@ -157,5 +168,13 @@ class MainActivity : AppCompatActivity() {
         placesViewModel.state.observe(this, Observer {
             placesListView.render(it)
         })
+    }
+
+    companion object {
+        private const val PREF_LAT = "latitude"
+        private const val PREF_LNG = "longitude"
+
+        private const val DEFAULT_LATITUDE = 52.3760508f
+        private const val DEFAULT_LONGITUDE = 4.8788894f
     }
 }
