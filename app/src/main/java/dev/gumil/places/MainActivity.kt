@@ -2,6 +2,7 @@ package dev.gumil.places
 
 import android.content.Context
 import android.location.Location
+import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
@@ -18,6 +19,7 @@ import dev.gumil.places.data.PlacesType
 import dev.gumil.places.presentation.LocationObserver
 import dev.gumil.places.presentation.PlacesViewModel
 import dev.gumil.places.presentation.list.PlacesListView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -130,7 +132,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadLocation(useDefault: Boolean) {
         textPermissionNotGranted.isVisible = useDefault
-        if (useDefault) {
+        if (useDefault || !isGpsEnabled()) {
             placesListView.refresh()
         }
     }
@@ -168,6 +170,13 @@ class MainActivity : AppCompatActivity() {
         placesViewModel.state.observe(this, Observer {
             placesListView.render(it)
         })
+    }
+
+    private fun isGpsEnabled(): Boolean {
+        val lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        return lm.isProviderEnabled(LocationManager.GPS_PROVIDER) || lm.isProviderEnabled(
+            LocationManager.NETWORK_PROVIDER
+        )
     }
 
     companion object {
